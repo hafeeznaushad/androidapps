@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp" />
+
+    <com.example.tasneem.alphabetpuzzle.DragLayer
+        android:id="@+id/dragLayer"
+        android:layout_below="@+id/imageView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        >
+
+    <GridView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/lettersView"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_height="300px"
+        android:columnWidth="60dp"
+        android:numColumns="4"
+        android:verticalSpacing="10dp"
+        android:horizontalSpacing="10dp"
+        android:stretchMode="columnWidth"
+        android:gravity="center"
+        android:background="@color/red"
+        />
+
+    <GridView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/answerView"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/lettersView"
+        android:layout_height="300px"
+        android:columnWidth="60dp"
+        android:numColumns="4"
+        android:verticalSpacing="10dp"
+        android:horizontalSpacing="10dp"
+        android:stretchMode="columnWidth"
+        android:gravity="center"
+        />
+
+        <Button
+            android:id="@+id/button_add_image"
+            android:layout_below="@+id/answerView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:onClick="onClickAddImage"
+            android:text="Next"/>
+    </com.example.tasneem.alphabetpuzzle.DragLayer>
+
+
+</RelativeLayout>
